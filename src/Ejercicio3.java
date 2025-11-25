@@ -42,12 +42,13 @@ public class Ejercicio3 {
         return last+invertirRecursivo(s,n-1); //Caso recursivo
     }
 
-    //Programa que solicit
+    //Programa que solicita una cadena al usuario
     public static void main(String[] args) {
         System.out.print("Introduzca una cadena: ");
         Scanner sc = new Scanner(System.in);
         String cadena = sc.nextLine();
         System.out.println(cadena);
+        //Se muestra la cadena invertida usando ambos enfoques
         System.out.println("Cadena Invertida de forma recursiva: ");
         System.out.println(invertirRecursivo(cadena,cadena.length()-1));
         System.out.println("Cadena Invertida de forma iterativa: ");
