@@ -33,17 +33,25 @@ public class Ejercicio3 {
         return sb.toString();
     }*/
 
-    String invertirRecursivo(String s, int n){
-        StringBuilder sb = new StringBuilder();
-        return sb.toString();
+    //Version recursiva para invertir la cadena
+    static String invertirRecursivo(String s, int n){
+        if(n == 0){//Caso base
+            return s.charAt(0)+"";
+        }
+        String last = s.charAt(n)+"";
+        return last+invertirRecursivo(s,n-1); //Caso recursivo
     }
 
+    //Programa que solicit
     public static void main(String[] args) {
         System.out.print("Introduzca una cadena: ");
         Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        System.out.println(s);
-        System.out.println(invertir(s));
+        String cadena = sc.nextLine();
+        System.out.println(cadena);
+        System.out.println("Cadena Invertida de forma recursiva: ");
+        System.out.println(invertirRecursivo(cadena,cadena.length()-1));
+        System.out.println("Cadena Invertida de forma iterativa: ");
+        System.out.println(invertir(cadena));
         sc.close();
     }
 }

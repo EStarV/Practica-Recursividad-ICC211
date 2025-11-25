@@ -27,8 +27,8 @@ public class Ejercicio1 {
 
     static int sumaRecursiva(int[] a, int n){
         if(n==0)
-            return 0;
-        return sumaRecursiva(a,n-1)+a[n-1];
+            return 0; //Caso base
+        return sumaRecursiva(a,n-1)+a[n-1]; //caso recursivo
     }
 
     public static  void main(String[] args) {
